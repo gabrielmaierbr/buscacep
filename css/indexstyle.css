@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+*
+{
+    user-select: none;
+}
+
+header
+{
+    position: absolute;
+    top: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+#conteudo
+{
+    display: inline;
+    width: 400px;
+    height: 350px;
+    box-shadow: 0 0 5px black;
+    border-radius: 15px;
+    transition: 0.8s;
+}
+
+#conteudo h1
+{
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+#label
+{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+#input
+{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    position: relative;
+    top: 70px;
+}
+
+#cepInput
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    box-shadow: 0 0 1px black;
+    width: 25%;
+    border-radius: 5px;
+}
+
+#conteudo section
+{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    position: relative;
+    top: 80px;
+}
+
+#endereco
+{
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+    display: none;
+    padding: 20px;
+    margin: 0;
+    justify-content: center;
+    animation: fade 5s;
+    font-size: 18px;
+    margin-top: 130px;
+}
+
+button
+{
+    background-color: #e2bc00;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 8px 12px;
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+button:hover
+{
+    background-color: #fdd400;
+    color: black;
+    box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+}
+
+img
+{
+    height: 50px;
+    width: 250px;
+}
