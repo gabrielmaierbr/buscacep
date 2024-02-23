@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <link rel="shortcut icon" href="css/img/correios.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/indexstyle.css">
+    <script src="script/script.js" defer></script>
+</head>
+<header id="logo">
+    <img src="css/img/logo.webp" alt="logo">
+</header>
+<body>
+    <div id="conteudo">
+        <div id="titulo">
+            <h1>Consulta de CEP</h1>
+        </div>
+        <hr>
+        <div id="label">
+            <label for="cepInput">Digite o seu CEP</label>
+        </div>
+        <div id="input">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>     
+            <input type="text" id="cepInput">
+            <script type="text/javascript">
+                $("#cepInput").mask("00000-000");
+            </script>       
+            <section>
+                <button id="botao" onclick="aumentarAltura();">Buscar</button>
+            </section>
+            <div id="endereco">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
