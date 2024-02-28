@@ -103,6 +103,26 @@ body
     margin-top: 130px;
 }
 
+#endereco a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagemMapa
+{
+    position: absolute;
+    top: 95%;
+    bottom: 10%;
+    left: 44%;
+    right: 45%;
+    height: 60px;
+    width: 60px;
+    animation: fade 5s;
+    align-items: center;
+}
+
 button
 {
     background-color: #caa900;

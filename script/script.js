@@ -1,7 +1,7 @@
 let cepInput = document.getElementById('cepInput');
 let endereco = document.getElementById('endereco');
 let botao = document.getElementById('botao');
-let link = document.getElementById('linkMapa');
+let imgMap = document.getElementById('imagemMapa');
 var input = document.getElementById("cepInput");
 
 input.addEventListener("keypress", function(event)
@@ -16,14 +16,16 @@ input.addEventListener("keypress", function(event)
 
 function aumentarAltura()
 {
-    document.getElementById('conteudo').style.height = "550px";
+    document.getElementById('conteudo').style.height = "620px";
     document.getElementById('endereco').style.display = "flex";
+    document.getElementById('imagemMapa').style.display = "flex";
 }
 
 function voltarEstado()
 {
     document.getElementById('conteudo').style.height = "360px";
     document.getElementById('endereco').style.display = "none";
+    document.getElementById('imagemMapa').style.display = "none";
 }
 
 botao.addEventListener("click", async function () {
@@ -36,15 +38,12 @@ botao.addEventListener("click", async function () {
 
         if (cep.length == 9 && !json.erro)
         {
+            const image = document.getElementById("imagemMapa");
             let enderecoMaps = `${json.logradouro}, ${json.bairro}, ${json.localidade}, ${json.uf}`;
             let linkMaps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(enderecoMaps)}`;
-            var a = document.createElement('a');
-            var linkText = document.createTextNode("my title text");
-            a.appendChild(linkText);
-            a.title = "my title text";
-            a.href = linkMaps;
-            endereco.appendChild(a);
-            endereco.innerText = `CEP: ${json.cep}\n\n ${json.logradouro}\n Bairro: ${json.bairro}\n ${json.localidade}, ${json.uf}\n\n ${a}`;
+            endereco.innerText = `CEP: ${json.cep}\n\n ${json.logradouro}\n Bairro: ${json.bairro}\n ${json.localidade}, ${json.uf}\n\n`;
+            endereco.append(image);
+            $(image).wrap("<a href='" + linkMaps + "' target='_blank'></a>");
         }
         
         else
