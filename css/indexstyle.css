@@ -28,6 +28,7 @@ body
 {
     background-image: url("./img/wallpaper.png");
     background-size: cover;
+    image-resolution: 1920px 1080px;
     margin-top: 150px;
     display: flex;
     justify-content: center;
