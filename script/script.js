@@ -4,6 +4,8 @@ let botao = document.getElementById('botao');
 let imgMap = document.getElementById('imagemMapa');
 var input = document.getElementById("cepInput");
 
+const image = document.getElementById("imagemMapa");
+
 input.addEventListener("keypress", function(event)
 {
     if (event.key === "Enter")
@@ -38,7 +40,6 @@ botao.addEventListener("click", async function () {
 
         if (cep.length == 9 && !json.erro)
         {
-            const image = document.getElementById("imagemMapa");
             let enderecoMaps = `${json.logradouro}, ${json.bairro}, ${json.localidade}, ${json.uf}`;
             let linkMaps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(enderecoMaps)}`;
             endereco.innerText = `CEP: ${json.cep}\n\n ${json.logradouro}\n Bairro: ${json.bairro}\n ${json.localidade}, ${json.uf}\n\n`;

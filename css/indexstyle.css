@@ -27,7 +27,6 @@ header
 body
 {
     background-image: url("./img/wallpaper.png");
-    background-repeat: no-repeat;
     background-size: cover;
     margin-top: 150px;
     display: flex;
