@@ -29,6 +29,7 @@ body
     background-image: url("./img/wallpaper.png");
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
     margin-top: 150px;
     display: flex;
     justify-content: center;
@@ -115,7 +116,7 @@ body
     position: absolute;
     top: 95%;
     bottom: 10%;
-    left: 44%;
+    left: 43%;
     right: 45%;
     height: 60px;
     width: 60px;
